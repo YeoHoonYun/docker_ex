@@ -1,0 +1,22 @@
+# Python 이미지를 기반으로 시작
+FROM python:3.8
+
+# 작업 디렉터리 설정
+WORKDIR /app
+
+# requirements.txt 파일 복사
+COPY requirements.txt .
+
+# Flask 및 기타 필요한 라이브러리 설치
+RUN pip install -r requirements.txt
+
+ENV FLASK_DEV=False
+
+# 앱 소스 복사
+COPY . .
+
+# 개발 환경을 위한 포트 매핑
+EXPOSE 5000
+
+# 앱 실행
+CMD [ "python", "app.py" ]
