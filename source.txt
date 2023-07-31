@@ -4,3 +4,6 @@ docker build -f Dockerfile.prod -t my_flask_app:prod .
 
 docker run -d -p 5000:5000 --name flask_app_dev my_flask_app:dev
 docker run -d -p 5001:5000 --name flask_app_prod my_flask_app:prod
+
+docker tag my_flask_app:dev cjswo9207/my_flask_app:dev
+docker tag my_flask_app:prod cjswo9207/my_flask_app:prod
