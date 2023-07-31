@@ -1,5 +1,5 @@
 # Python 이미지를 기반으로 시작
-FROM python:3.8
+FROM python:3.6
 
 # 작업 디렉터리 설정
 WORKDIR /app
@@ -8,7 +8,7 @@ WORKDIR /app
 COPY requirements.txt .
 
 # Flask 및 기타 필요한 라이브러리 설치
-RUN pip install -r requirements.txt
+RUN python -m pip install -r requirements.txt
 
 ENV FLASK_DEV=True
 
