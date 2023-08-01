@@ -10,7 +10,7 @@ COPY requirements.txt .
 # Flask 및 기타 필요한 라이브러리 설치
 RUN python -m pip install -r requirements.txt
 
-ENV FLASK_DEV=True
+ENV FLASK_DEV=False
 
 # 앱 소스 복사
 COPY . .
